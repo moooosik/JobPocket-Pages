@@ -474,6 +474,14 @@ h2 {
   margin-bottom: 8px;
 }
 
+.price-copy {
+  margin-bottom: 10px;
+}
+
+.price-card ul li {
+  margin-bottom: 8px;
+}
+
 ul {
   margin: 14px 0 0;
   padding-left: 18px;
