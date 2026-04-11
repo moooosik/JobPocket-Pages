@@ -3,52 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JobPocket</title>
-  <meta name="description" content="JobPocket is a lightweight browser assistant that helps job seekers score jobs, tailor resume sections, draft outreach, and track applications.">
+
+  <title>JobPocket, Lightweight Job Search Assistant</title>
+  <meta name="description" content="JobPocket is a lightweight browser assistant that helps you score jobs, tailor resume sections, draft outreach, and track applications directly from the job page.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0b1020">
+
+  <link rel="canonical" href="https://mooosik.github.io/JobPocket-Pages/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Cpath d='M18 24h28a4 4 0 0 1 4 4v18a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6V28a4 4 0 0 1 4-4Z' fill='%235b8cff'/%3E%3Cpath d='M24 20a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4H24v-4Z' fill='%23a7c3ff'/%3E%3C/svg%3E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JobPocket, Lightweight Job Search Assistant">
+  <meta property="og:description" content="Score jobs, tailor resume sections, draft outreach, and track applications from the page you are already on.">
+  <meta property="og:url" content="https://mooosik.github.io/JobPocket-Pages/">
+  <meta property="og:site_name" content="JobPocket">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JobPocket, Lightweight Job Search Assistant">
+  <meta name="twitter:description" content="A lightweight browser assistant for job hunting.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "JobPocket",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Chrome Extension",
+    "description": "A lightweight browser assistant that helps job seekers score jobs, tailor resume sections, draft outreach, and track applications.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <h1>JobPocket</h1>
-      <p class="tagline">A lightweight browser assistant for job hunting.</p>
-      <p class="subtext">Score jobs, tailor resume sections, draft outreach, and track applications from the page you are already on.</p>
-      <div class="cta-row">
-        <a class="button primary" href="#">Join the waitlist</a>
-        <a class="button secondary" href="#">See how it works</a>
-      </div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-mark">JP</span>
+        <span>JobPocket</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+
+      <a class="button button-ghost" href="#waitlist">Join waitlist</a>
     </div>
   </header>
+
   <main>
-    <section class="features">
-      <div class="container">
-        <h2>What it does</h2>
-        <div class="feature-grid">
-          <div class="card">
-            <h3>Import Job</h3>
-            <p>Pull job title, company, description, and link directly from the page.</p>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Lightweight browser assistant for job hunting</div>
+          <h1>Score roles, tailor your resume, and draft outreach without leaving the job page.</h1>
+          <p class="hero-text">
+            JobPocket helps you quickly evaluate openings, rewrite the right section of your resume,
+            generate targeted outreach, and keep track of applications in one simple flow.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#waitlist">Get early access</a>
+            <a class="button button-secondary" href="#how-it-works">See the workflow</a>
           </div>
-          <div class="card">
-            <h3>Score Fit</h3>
-            <p>Quickly see how well the role matches your resume and background.</p>
+
+          <div class="hero-meta">
+            <span>Fast job triage</span>
+            <span>Section-based resume tailoring</span>
+            <span>Optional local AI mode</span>
           </div>
-          <div class="card">
-            <h3>Tailor Resume</h3>
-            <p>Rewrite selected resume sections to better align with the posting.</p>
-          </div>
-          <div class="card">
-            <h3>Draft Outreach</h3>
-            <p>Create short messages for recruiters, hiring managers, alumni, or past colleagues.</p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="mock-window">
+            <div class="mock-topbar">
+              <span></span><span></span><span></span>
+            </div>
+
+            <div class="mock-layout">
+              <div class="job-page">
+                <div class="job-chip">Indeed</div>
+                <h3>Senior Controls Engineer</h3>
+                <p class="muted">Grid systems, BESS integration, SCADA, commissioning</p>
+
+                <div class="job-lines">
+                  <span></span><span></span><span></span><span></span><span class="short"></span>
+                </div>
+              </div>
+
+              <aside class="side-panel">
+                <div class="panel-header">
+                  <strong>JobPocket</strong>
+                  <div class="status-dot"></div>
+                </div>
+
+                <div class="panel-card float-a">
+                  <div class="mini-label">Fit score</div>
+                  <div class="score-row">
+                    <span class="score">84</span>
+                    <span class="score-copy">Strong match</span>
+                  </div>
+                </div>
+
+                <div class="panel-card float-b">
+                  <div class="mini-label">Tailor resume</div>
+                  <div class="dropdown">Experience, Lead Controls Engineer</div>
+                </div>
+
+                <div class="panel-card float-c">
+                  <div class="mini-label">Outreach</div>
+                  <div class="tag-row">
+                    <span class="tag">Recruiter</span>
+                    <span class="tag">Hiring Manager</span>
+                  </div>
+                </div>
+
+                <div class="panel-card">
+                  <div class="mini-label">Tracker</div>
+                  <div class="tracker-row">
+                    <span>Saved</span>
+                    <span class="pill">Applied</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="pricing">
+
+    <section class="proof reveal">
+      <div class="container proof-wrap">
+        <p class="proof-label">Built for people who are tired of slow, repetitive job workflows</p>
+        <div class="proof-grid">
+          <div class="proof-card">
+            <strong>Faster triage</strong>
+            <p>Quickly decide whether a job deserves your time.</p>
+          </div>
+          <div class="proof-card">
+            <strong>Sharper applications</strong>
+            <p>Rewrite only the section that matters instead of rebuilding everything.</p>
+          </div>
+          <div class="proof-card">
+            <strong>Lower friction</strong>
+            <p>Stay on the job page instead of bouncing between tabs and docs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features reveal">
       <div class="container">
-        <h2>Simple pricing</h2>
-        <p>Hosted usage with credit packs, plus a low-cost local AI unlock for private workflows.</p>
+        <div class="section-head">
+          <div class="eyebrow">Core workflow</div>
+          <h2>Focused features, not a bloated platform.</h2>
+          <p>JobPocket is designed around the high-frequency actions job seekers repeat every day.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Import Job</h3>
+            <p>Pull title, company, link, and job description directly from the page.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Score Fit</h3>
+            <p>See a fast fit score and a short explanation of strengths and gaps.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Tailor Resume</h3>
+            <p>Rewrite one selected section without overhauling the whole document.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Draft Outreach</h3>
+            <p>Generate concise messages for recruiters, hiring managers, alumni, and former colleagues.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Track Applications</h3>
+            <p>Save each job and keep the workflow moving in one place.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Optional Local Mode</h3>
+            <p>Use local AI for privacy-minded workflows and lower ongoing cost.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="workflow reveal">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">How it works</div>
+          <h2>A cleaner loop from discovery to application.</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">01</span>
+            <h3>Open a job post</h3>
+            <p>JobPocket reads the page and imports the relevant data.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <h3>Score the role</h3>
+            <p>See whether the role is worth pursuing before you sink time into it.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <h3>Tailor and reach out</h3>
+            <p>Rewrite the right resume section and generate targeted outreach in a few clicks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing reveal">
+      <div class="container pricing-wrap">
+        <div class="section-head">
+          <div class="eyebrow">Pricing direction</div>
+          <h2>Simple enough to understand.</h2>
+          <p>Hosted credits for convenience, plus a low-cost local unlock for private workflows.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Hosted</h3>
+            <p class="price-copy">Pay for job actions as you use them.</p>
+            <ul>
+              <li>Import job for free</li>
+              <li>1 credit per AI action</li>
+              <li>Good for fast setup</li>
+            </ul>
+          </div>
+
+          <div class="price-card featured">
+            <div class="featured-badge">Planned</div>
+            <h3>Local Unlock</h3>
+            <p class="price">$10</p>
+            <p class="price-copy">One-time unlock for local AI mode.</p>
+            <ul>
+              <li>Privacy-friendly workflow</li>
+              <li>Use your own local model</li>
+              <li>Lower recurring cost</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="waitlist" class="cta reveal">
+      <div class="container cta-box">
+        <div>
+          <div class="eyebrow">Early access</div>
+          <h2>See if JobPocket fits your workflow.</h2>
+          <p>Join the waitlist to get launch updates and early testing access.</p>
+        </div>
+
+        <form class="waitlist-form" action="#" method="post">
+          <input type="email" placeholder="Enter your email" aria-label="Email address">
+          <button type="submit" class="button button-primary">Join waitlist</button>
+        </form>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 JobPocket</p>
+      <p>Lightweight browser assistant for job hunting.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
