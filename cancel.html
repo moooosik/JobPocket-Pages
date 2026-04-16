@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment cancelled — JobPocket</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=3">
+  <style>
+    .status-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .status-card {
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 24px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    .status-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .status-card h1 {
+      font-size: 1.8rem;
+      max-width: none;
+      margin-bottom: 12px;
+    }
+    .status-card p {
+      color: #94a3b8;
+      margin-bottom: 28px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="status-page">
+    <div class="status-card">
+      <div class="status-icon">&#x2715;</div>
+      <h1>Payment cancelled</h1>
+      <p>No charge was made. Close this tab and return to the JobPocket extension whenever you're ready.</p>
+      <a class="button button-secondary" href="javascript:window.close()">Close tab</a>
+    </div>
+  </div>
+</body>
+</html>

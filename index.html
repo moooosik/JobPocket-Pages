@@ -1,27 +1,30 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>JobPocket, Lightweight Job Search Assistant</title>
-  <meta name="description" content="JobPocket is a lightweight browser assistant that helps you score jobs, tailor resume sections, draft outreach, and track applications directly from the job page.">
+  <title>JobPocket — AI Resume Tailoring & Job Fit Scoring for Chrome</title>
+  <meta name="description" content="JobPocket is a Chrome extension that extracts job postings, scores your fit with AI, and generates a tailored resume in seconds. Download as DOCX. Use hosted AI or your own local model.">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#060816">
 
   <link rel="canonical" href="https://mooosik.github.io/JobPocket-Pages/">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="JobPocket, Lightweight Job Search Assistant">
-  <meta property="og:description" content="Score jobs, tailor resume sections, draft outreach, and track applications from the page you are already on.">
+  <meta property="og:title" content="JobPocket — AI Resume Tailoring & Job Fit Scoring">
+  <meta property="og:description" content="Extract job postings, score your resume fit, and generate a tailored resume without leaving the page. Exports to DOCX.">
   <meta property="og:url" content="https://mooosik.github.io/JobPocket-Pages/">
   <meta property="og:site_name" content="JobPocket">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="JobPocket, Lightweight Job Search Assistant">
-  <meta name="twitter:description" content="A lightweight browser assistant for job hunting.">
+  <meta name="twitter:title" content="JobPocket — AI Resume Tailoring & Job Fit Scoring">
+  <meta name="twitter:description" content="Chrome extension that scores your job fit and tailors your resume with AI. Pay per use or run locally.">
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,16 +32,41 @@
     "name": "JobPocket",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Chrome Extension",
-    "description": "A lightweight browser assistant that helps job seekers score jobs, tailor resume sections, draft outreach, and track applications.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "description": "Chrome extension that extracts job postings, scores resume fit, and generates a tailored resume with AI. Exports to DOCX.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Credits",
+        "price": "5.00",
+        "priceCurrency": "USD",
+        "description": "25 hosted AI credits"
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard Credits",
+        "price": "10.00",
+        "priceCurrency": "USD",
+        "description": "60 hosted AI credits"
+      },
+      {
+        "@type": "Offer",
+        "name": "Value Credits",
+        "price": "25.00",
+        "priceCurrency": "USD",
+        "description": "175 hosted AI credits"
+      },
+      {
+        "@type": "Offer",
+        "name": "Local Model Unlock",
+        "price": "10.00",
+        "priceCurrency": "USD",
+        "description": "Lifetime unlock for local Ollama model — no credits ever"
+      }
+    ]
   }
   </script>
 
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <div class="bg-orb orb-1"></div>
@@ -57,30 +85,33 @@
         <a href="#pricing">Pricing</a>
       </nav>
 
-      <a class="button button-ghost" href="#waitlist">Join waitlist</a>
+      <a class="button button-primary" href="https://chrome.google.com/webstore" target="_blank" rel="noopener">Add to Chrome</a>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow">Lightweight browser assistant for job hunting</div>
-          <h1>Score roles, tailor your resume, and draft outreach without leaving the job page.</h1>
+          <div class="eyebrow">Chrome Extension for Job Seekers</div>
+          <h1>Score fit. Tailor your resume. Land faster.</h1>
           <p class="hero-text">
-            JobPocket helps you quickly evaluate openings, rewrite the right section of your resume,
-            generate targeted outreach, and keep track of applications in one simple flow.
+            JobPocket sits alongside any job posting and does the heavy lifting —
+            extract job details, get an AI-powered fit score with strengths and gaps,
+            then generate a tailored resume and download it as a polished DOCX.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#waitlist">Get early access</a>
-            <a class="button button-secondary" href="#how-it-works">See the workflow</a>
+            <a class="button button-primary" href="https://chrome.google.com/webstore" target="_blank" rel="noopener">Add to Chrome — it's free to start</a>
+            <a class="button button-secondary" href="#how-it-works">See how it works</a>
           </div>
 
           <div class="hero-meta">
-            <span>Fast job triage</span>
-            <span>Section-based resume tailoring</span>
-            <span>Optional local AI mode</span>
+            <span>AI fit scoring</span>
+            <span>Full resume tailoring</span>
+            <span>DOCX export</span>
+            <span>Local AI option</span>
           </div>
         </div>
 
@@ -92,10 +123,9 @@
 
             <div class="mock-layout">
               <div class="job-page">
-                <div class="job-chip">Indeed</div>
-                <h3>Software Engineer</h3>
-                <p class="muted">Backend systems, APIs, cloud infrastructure, product development</p>
-
+                <div class="job-chip">LinkedIn</div>
+                <h3>Senior Software Engineer</h3>
+                <p class="muted">Node.js · AWS · PostgreSQL · REST APIs</p>
                 <div class="job-lines">
                   <span></span><span></span><span></span><span></span><span class="short"></span>
                 </div>
@@ -110,29 +140,23 @@
                 <div class="panel-card float-a">
                   <div class="mini-label">Fit score</div>
                   <div class="score-row">
-                    <span class="score">84</span>
-                    <span class="score-copy">Strong match</span>
+                    <span class="score">87</span>
+                    <span class="score-badge">Strong match</span>
                   </div>
                 </div>
 
                 <div class="panel-card float-b">
-                  <div class="mini-label">Tailor resume</div>
-                  <div class="dropdown">Experience, Software Engineer</div>
-                </div>
-
-                <div class="panel-card float-c">
-                  <div class="mini-label">Outreach</div>
-                  <div class="tag-row">
-                    <span class="tag">Recruiter</span>
-                    <span class="tag">Hiring Manager</span>
+                  <div class="mini-label">Strengths &amp; gaps</div>
+                  <div class="analysis-lines">
+                    <span></span><span></span><span class="short"></span>
                   </div>
                 </div>
 
-                <div class="panel-card">
-                  <div class="mini-label">Tracker</div>
-                  <div class="tracker-row">
-                    <span>Saved</span>
-                    <span class="pill">Applied</span>
+                <div class="panel-card float-c">
+                  <div class="mini-label">Tailored resume ready</div>
+                  <div class="dl-row">
+                    <span class="dl-chip">Markdown</span>
+                    <span class="dl-chip accent">DOCX</span>
                   </div>
                 </div>
               </aside>
@@ -142,139 +166,161 @@
       </div>
     </section>
 
+    <!-- Proof strip -->
     <section class="proof reveal">
       <div class="container proof-wrap">
-        <p class="proof-label">Built for people who are tired of slow, repetitive job workflows</p>
+        <p class="proof-label">Built for job seekers who are tired of rewriting the same resume over and over</p>
         <div class="proof-grid">
           <div class="proof-card">
-            <strong>Faster triage</strong>
-            <p>Quickly decide whether a job deserves your time.</p>
+            <strong>Instant triage</strong>
+            <p>Know whether a job is worth your time before you start writing.</p>
           </div>
           <div class="proof-card">
-            <strong>Sharper applications</strong>
-            <p>Rewrite only the section that matters instead of rebuilding everything.</p>
+            <strong>Targeted resumes</strong>
+            <p>Tailor your entire resume to the specific role, not just one section.</p>
           </div>
           <div class="proof-card">
-            <strong>Lower friction</strong>
-            <p>Stay on the job page instead of bouncing between tabs and docs.</p>
+            <strong>Zero copy-paste</strong>
+            <p>Stay on the job page. Extract, score, tailor, and download — all in one place.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Features -->
     <section id="features" class="features reveal">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Core workflow</div>
-          <h2>Focused features, not a bloated platform.</h2>
-          <p>JobPocket is designed around the high-frequency actions job seekers repeat every day.</p>
+          <div class="eyebrow">Core features</div>
+          <h2>Everything you need. Nothing you don't.</h2>
+          <p>JobPocket is built around the four actions that actually move a job application forward.</p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
-            <h3>Import Job</h3>
-            <p>Pull title, company, link, and job description directly from the page.</p>
+            <div class="feature-icon">&#x1F4CB;</div>
+            <h3>Extract Job</h3>
+            <p>Pull the job title, company, and full description from the page in one click.</p>
           </article>
           <article class="feature-card">
+            <div class="feature-icon">&#x2728;</div>
             <h3>Score Fit</h3>
-            <p>See a fast fit score and a short explanation of strengths and gaps.</p>
+            <p>Get a numeric fit score, a hire/pass recommendation, and a concise breakdown of your strengths and gaps.</p>
           </article>
           <article class="feature-card">
+            <div class="feature-icon">&#x270F;&#xFE0F;</div>
             <h3>Tailor Resume</h3>
-            <p>Rewrite one selected section without overhauling the whole document.</p>
+            <p>AI rewrites your full resume to match the role's language and priorities. Edit in the built-in text editor before downloading.</p>
           </article>
           <article class="feature-card">
-            <h3>Draft Outreach</h3>
-            <p>Generate concise messages for recruiters, hiring managers, alumni, and former colleagues.</p>
+            <div class="feature-icon">&#x1F4C4;</div>
+            <h3>Export to DOCX</h3>
+            <p>Download a professionally formatted Word document with configurable fonts, margins, and section colors.</p>
           </article>
           <article class="feature-card">
-            <h3>Track Applications</h3>
-            <p>Save each job and keep the workflow moving in one place.</p>
+            <div class="feature-icon">&#x1F4BE;</div>
+            <h3>Multiple Resumes</h3>
+            <p>Import and manage several resume versions. Drag-and-drop TXT, MD, PDF, DOCX, or DOC files.</p>
           </article>
           <article class="feature-card">
-            <h3>Optional Local Mode</h3>
-            <p>Use local AI for privacy-minded workflows and lower ongoing cost.</p>
+            <div class="feature-icon">&#x1F510;</div>
+            <h3>Local AI Mode</h3>
+            <p>Unlock once and run everything through your own Ollama instance. No credits, no data leaving your machine.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- How it works -->
     <section id="how-it-works" class="workflow reveal">
       <div class="container">
         <div class="section-head">
           <div class="eyebrow">How it works</div>
-          <h2>A cleaner loop from discovery to application.</h2>
+          <h2>Three clicks from job post to tailored resume.</h2>
         </div>
 
         <div class="steps">
           <div class="step">
             <span class="step-num">01</span>
             <h3>Open a job post</h3>
-            <p>JobPocket reads the page and imports the relevant data.</p>
+            <p>Navigate to any job listing. Click <strong>Extract Job</strong> and JobPocket reads the page automatically.</p>
           </div>
           <div class="step">
             <span class="step-num">02</span>
-            <h3>Score the role</h3>
-            <p>See whether the role is worth pursuing before you sink time into it.</p>
+            <h3>Score the fit</h3>
+            <p>Click <strong>Score Fit</strong> to get an AI-generated match score, recommendation, and strengths/gaps summary against your resume.</p>
           </div>
           <div class="step">
             <span class="step-num">03</span>
-            <h3>Tailor and reach out</h3>
-            <p>Rewrite the right resume section and generate targeted outreach in a few clicks.</p>
+            <h3>Tailor and download</h3>
+            <p>Click <strong>Tailor Resume</strong>. Review and edit the result, then download a polished Markdown or DOCX file.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Pricing -->
     <section id="pricing" class="pricing reveal">
       <div class="container pricing-wrap">
         <div class="section-head">
-          <div class="eyebrow">Pricing direction</div>
-          <h2>Simple enough to understand.</h2>
-          <p>Hosted credits for convenience, plus a low-cost local unlock for private workflows.</p>
+          <div class="eyebrow">Pricing</div>
+          <h2>Pay for what you use.</h2>
+          <p>Buy credits for hosted AI, or unlock local mode once and never pay per action again.</p>
         </div>
 
         <div class="pricing-grid">
+          <!-- Hosted credits -->
           <div class="price-card">
-            <h3>Hosted Credits</h3>
-            <p class="price-copy">Pay only for the AI actions you use.</p>
+            <h3>Hosted AI Credits</h3>
+            <p class="price-copy">Use our cloud AI — no setup required.</p>
+            <div class="credit-options">
+              <div class="credit-option">
+                <span class="credit-price">$5</span>
+                <span class="credit-amount">25 credits</span>
+              </div>
+              <div class="credit-option">
+                <span class="credit-price">$10</span>
+                <span class="credit-amount">60 credits</span>
+              </div>
+              <div class="credit-option highlighted">
+                <span class="credit-price">$25</span>
+                <span class="credit-amount">175 credits</span>
+              </div>
+            </div>
             <ul>
-              <li>Import job for free</li>
-              <li>1 credit per AI action</li>
-              <li>20 credits for $5</li>
-              <li>60 credits for $12</li>
-              <li>150 credits for $25</li>
+              <li>1 credit = Score Fit</li>
+              <li>2 credits = Tailor Resume</li>
+              <li>Job extraction is always free</li>
+              <li>New accounts include 5 free credits</li>
             </ul>
           </div>
 
+          <!-- Local unlock -->
           <div class="price-card featured">
-            <div class="featured-badge">Planned</div>
-            <h3>Local Unlock</h3>
-            <p class="price">$10</p>
-            <p class="price-copy">One-time unlock for local AI mode.</p>
+            <div class="featured-badge">Live</div>
+            <h3>Local Model Unlock</h3>
+            <p class="price">$10 <span class="price-once">one-time</span></p>
+            <p class="price-copy">Run everything through your own Ollama. Forever.</p>
             <ul>
-              <li>Privacy-friendly workflow</li>
-              <li>Use your own local model</li>
-              <li>Lower recurring cost</li>
+              <li>Zero credits, zero recurring cost</li>
+              <li>Your data never leaves your machine</li>
+              <li>Works with any Ollama-compatible model</li>
+              <li>Unlock once, use forever</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="waitlist" class="cta reveal">
-      <div class="container cta-box">
-        <div>
-          <div class="eyebrow">Early access</div>
-          <h2>See if JobPocket fits your workflow.</h2>
-          <p>Join the waitlist to get launch updates and early testing access.</p>
+    <!-- CTA -->
+    <section class="cta reveal">
+      <div class="container">
+        <div class="cta-box cta-center">
+          <div class="eyebrow">Ready to try it?</div>
+          <h2>Start with 5 free credits.</h2>
+          <p>Install the extension, create a free account, and you're ready to go. No credit card required to start.</p>
+          <a class="button button-primary button-lg" href="https://chrome.google.com/webstore" target="_blank" rel="noopener">Add to Chrome</a>
         </div>
-
-        <form class="waitlist-form" action="https://formspree.io/f/mzdknjze" method="POST">
-          <input type="email" name="email" placeholder="Enter your email" aria-label="Email address" required>
-          <input type="hidden" name="_subject" value="New JobPocket waitlist signup">
-          <button type="submit" class="button button-primary">Join waitlist</button>
-        </form>
       </div>
     </section>
   </main>
@@ -282,10 +328,10 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p>© 2026 JobPocket</p>
-      <p>Lightweight browser assistant for job hunting.</p>
+      <p>AI-powered job application assistant for Chrome.</p>
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="scripts.js?v=3"></script>
 </body>
 </html>
