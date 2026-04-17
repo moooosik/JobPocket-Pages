@@ -225,12 +225,41 @@ h2 {
   border-radius: 999px;
 }
 
+/* ── Browser badges ── */
+.browser-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.browser-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.25);
+  background: rgba(255,255,255,0.05);
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.browser-badge img {
+  opacity: 0.8;
+}
+
 /* ── Product screenshot ── */
 .product-screenshot-wrap {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(148,163,184,0.12);
+  /* Constrain height so portrait image doesn't dominate */
+  max-height: 640px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .product-screenshot-wrap::before {
@@ -245,9 +274,12 @@ h2 {
 
 .product-screenshot {
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  max-height: 640px;
   border-radius: 16px;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* ── Waitlist form ── */
