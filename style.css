@@ -317,6 +317,21 @@ h2 {
   color: var(--muted);
 }
 
+/* ── Download buttons ── */
+.download-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.download-note {
+  margin-top: 16px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 /* ── Mock window ── */
 .mock-window {
   position: relative;
