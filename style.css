@@ -225,28 +225,11 @@ h2 {
   border-radius: 999px;
 }
 
-/* ── Browser badges ── */
-.browser-badges {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.browser-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(148,163,184,0.25);
-  background: rgba(255,255,255,0.05);
+/* ── Hero note ── */
+.hero-note {
   font-size: 0.82rem;
   color: var(--muted);
-  font-weight: 500;
-}
-
-.browser-badge img {
-  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 /* ── Product screenshot ── */
@@ -684,6 +667,14 @@ h2 {
   color: var(--muted);
 }
 
+.credit-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
 .price-card ul {
   margin: 16px 0 0;
   padding-left: 18px;
@@ -718,6 +709,110 @@ h2 {
   max-width: 48ch;
 }
 
+/* ── Social proof ── */
+.social-proof {
+  padding: 0 0 48px;
+}
+
+.proof-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  text-align: center;
+}
+
+.proof-stat {
+  padding: 28px 16px;
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 20px;
+}
+
+.proof-stat strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.proof-stat span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.testimonial {
+  margin: 0;
+  padding: 22px;
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 20px;
+}
+
+.testimonial p {
+  color: var(--text);
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.testimonial cite {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ── Mid-page CTA ── */
+.mid-cta {
+  padding: 16px 0 64px;
+}
+
+.mid-cta-box {
+  text-align: center;
+  padding: 48px 40px;
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(124, 156, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(91, 140, 255, 0.08);
+}
+
+.mid-cta-box h2 {
+  margin-bottom: 12px;
+}
+
+.mid-cta-box p {
+  color: var(--muted);
+  max-width: 48ch;
+  margin: 0 auto 24px;
+}
+
+.mid-cta-box .download-buttons {
+  justify-content: center;
+  margin-top: 0;
+}
+
+/* ── Pricing CTA + privacy ── */
+.pricing-cta {
+  display: flex;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.privacy-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
 /* ── Footer ── */
 .site-footer {
   padding: 24px 0 40px;
@@ -727,9 +822,24 @@ h2 {
 .footer-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 16px;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  transition: color 180ms ease;
+}
+
+.footer-links a:hover {
+  color: var(--text);
 }
 
 /* ── Reveal animations ── */
@@ -756,8 +866,13 @@ h2 {
   .proof-grid,
   .feature-grid,
   .steps,
-  .pricing-grid {
+  .pricing-grid,
+  .testimonials {
     grid-template-columns: 1fr;
+  }
+
+  .proof-stats {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -778,12 +893,23 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 
-  .cta-box {
+  .cta-box,
+  .mid-cta-box {
     padding: 32px 20px;
+  }
+
+  .proof-stats {
+    grid-template-columns: 1fr;
   }
 
   .footer-wrap {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
